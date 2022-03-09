@@ -1,0 +1,35 @@
+.entete{
+  background: linear-gradient(to left, lime, lime 28px, red 68%, cyan);
+  padding: 1%;
+  margin-top: -1%;
+  margin-left: -1%;
+  margin-right: -1%;
+  h1{
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.products{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.pied-page {
+  background: linear-gradient(to left, lime, lime 28px, red 68%, cyan);
+  padding: 1%;
+  margin-bottom: -1%;
+  margin-left: -1%;
+  margin-right: -1%;
+  position: static;
+  p {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+  }
+}
