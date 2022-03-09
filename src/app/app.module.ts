@@ -15,7 +15,6 @@ import { ToBoldPipe } from './pipes/product.pipe';
 registerLocaleData(localeFr);
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
