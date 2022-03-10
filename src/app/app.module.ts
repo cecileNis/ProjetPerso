@@ -32,11 +32,11 @@ registerLocaleData(localeFr);
     FilterByNamePipe,
     ToBoldPipe
   ],
-  //providers: [{
-    //provide : LOCALE_ID,
-    //useValue : 'fr-FR'// 'de-DE' for Germany, 'fr-FR' for France ...
-  //}],
-  providers:[],
+  providers: [{
+    provide : LOCALE_ID,
+    useValue : 'fr-FR'// 'de-DE' for Germany, 'fr-FR' for France ...
+  }],
+  //providers:[],
 
   bootstrap: [AppComponent],
 })
