@@ -2,7 +2,7 @@
   <h2 [outerHTML]="myProduct.title | toBold"></h2>
   <div><img [src]="myProduct.imageUrl"></div>
   <p>{{ myProduct.description }}</p>
-  <p **ngIf="myProduct.size?.length > 1">Plusieur tailles disponibles</p>
+  <p *ngIf="myProduct.size && myProduct.size.length > 1">Plusieurs tailles disponibles</p>
   <div class="price-likes">
     <b>{{ (myProduct.price / 100) | currency:'EUR': true : '1.1' }} </b>
     <p>
@@ -10,7 +10,12 @@
       <button (click)="onLike()">{{ myProduct.isLiked ? 'unlike' : 'like' }}</button>
     </p>
   </div>
-  <div class="date"> Date : {{ myProduct.createdDate | date:'fullDate' }} </div>
+  <p>
+    <b class="date"> {{ myProduct.createdDate | date:'fullDate' }} </b>
+    <a class="details" *ngIf= "displayLink" [routerLink] = "['product', myProduct.id]">
+      Plus de détails..
+    </a>
+  </p>
 </div>
 
 

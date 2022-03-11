@@ -1,17 +1,10 @@
-<div class="entete">
-    <h1>
-      Welcome to {{ title }}!
-    </h1>
-  <div>Chercher <input type="text"  id="search" name="search" [(ngModel)]="search"/></div>
-  <div>La recherche : {{search}} </div>
-</div>
+<app-header></app-header>
 
-<div class="products">
-  <app-product-card *ngFor="let product of (products | sortByDate:'asc' | filterByName:search)" [myProduct]="product">
-  </app-product-card>
-</div>
 
-<div class="pied-page">
-  <p>Merci de votre visite</p>
-</div>
+<router-outlet></router-outlet>
+
+
+
+
+<app-footer></app-footer>
 

@@ -9,10 +9,11 @@ import { ProductsService } from '../produits/products.produit';
 })
 export class ProductCardComponent {
   @Input() myProduct!: Product;
+  @Input() displayLink: boolean=false;
 
   constructor(private productsService: ProductsService) { }
 
   onLike() {
-    this.productsService.onLikeProduct(this.myProduct)
+    this.productsService.onLikeProduct(this.myProduct).subscribe((p:Product) => this.myProduct = p)
   }
 }

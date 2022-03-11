@@ -1,7 +1,7 @@
 .root {
   margin: 4px auto 4px auto;
   width: 50%;
-  background-color: darkgrey;
+  background-color: white;
   text-align: center;
 }
 
@@ -17,7 +17,21 @@ img {
 
 .date{
   margin-top: -2px;
+  text-transform: uppercase;
+  justify-content: start;
 }
+.details{
+  display: flex;
+  justify-content: end;
+}
+
+a:-webkit-any-link{
+  color: black;
+  text-decoration: none;
+}
+
+
+
 
 
 
